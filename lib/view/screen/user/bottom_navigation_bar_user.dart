@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smart_presence_app/list/list_page_view.dart';
+import 'package:smart_presence_app/model/list/list_page_view.dart';
 import 'package:smart_presence_app/widget/custom_icon_button.dart';
 import 'package:smart_presence_app/widget/custom_logo.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';

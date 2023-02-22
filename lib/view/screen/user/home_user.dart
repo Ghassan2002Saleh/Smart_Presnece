@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:smart_presence_app/widget/custom_alertdialog.dart';
 import 'package:smart_presence_app/widget/custom_button_body.dart';
+import 'package:widget_mask/widget_mask.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -64,9 +65,18 @@ class _BodyDataState extends State<BodyData> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        // const SizedBox(
-        //   height: 30,
-        // ),
+        const SizedBox(
+          height: 30,
+        ),
+        WidgetMask(
+          blendMode: BlendMode.srcATop,
+          childSaveLayer: true,
+          mask: Image.asset("images/shape.png"),
+          child: Image.network(
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcOycfScEV9t9uJrfvotrEQSNBSngQr25MSw&usqp=CAU",
+            width: 100,
+          ),
+        ),
         // Container(
         //   width: 100,
         //   height: 100,

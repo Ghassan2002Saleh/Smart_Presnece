@@ -13,13 +13,12 @@ class ExistingPage extends StatefulWidget {
 }
 
 class _ExistingPageState extends State<ExistingPage> {
-  localcontroller controllerlang = Get.find();
+  localcontroller controller = Get.find();
   late bool bottom2 = false, _expansion = false;
 
   @override
   Widget build(BuildContext context) {
-    bool bottom =
-        controllerlang.intiallang == const Locale("en") ? true : false;
+    bool bottom = controller.intiallang == const Locale("en") ? true : false;
     return Scaffold(
         backgroundColor: Theme.of(context).backgroundColor,
         body: SizedBox(
@@ -54,18 +53,20 @@ class _ExistingPageState extends State<ExistingPage> {
                   ),
                   CustomExisting(
                     icon: const Icon(Icons.language),
-                    text: "لغة انجليزية",
+                    text: bottom == false
+                        ? "تحويل اللغة الى انجليزي"
+                        : "Convert the language to Arabic",
                     widget: Switch(
                         value: bottom,
                         activeColor: Theme.of(context).primaryColor,
                         onChanged: (vale) {
                           if (vale == false) {
                             setState(() {
-                              controllerlang.lang("ar");
+                              controller.lang("ar");
                             });
                           } else {
                             setState(() {
-                              controllerlang.lang("en");
+                              controller.lang("en");
                             });
                           }
                         }),

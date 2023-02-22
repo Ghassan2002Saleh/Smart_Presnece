@@ -1,11 +1,7 @@
 import 'dart:async';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../main.dart';
-import 'user/bottom_navigation_bar_user.dart';
-import 'user/data_entry_user.dart';
-import 'user/info_screen.dart';
+import 'package:smart_presence_app/controller/control.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -14,22 +10,14 @@ class SplashPage extends StatefulWidget {
   State<SplashPage> createState() => _SplashPageState();
 }
 
-User? user = FirebaseAuth.instance.currentUser;
-
 class _SplashPageState extends State<SplashPage> {
-  bool islogin = user == null ? false : true;
-  String? shared = sharedpref?.getString("entry");
-  String? uid = FirebaseAuth.instance.currentUser?.uid;
+  localcontroller controller = Get.find();
+
   @override
   void initState() {
     Timer(const Duration(seconds: 3), () {
-      islogin == false
-          ? Get.off(const AnimationScrol())
-          : islogin == true && shared != null && shared == uid
-              ? Get.off(const BottomNavigationBarUser())
-              : Get.off(const DataEntryUser());
+      controller.splashLogin();
     });
-    // navigator();
     super.initState();
   }
 

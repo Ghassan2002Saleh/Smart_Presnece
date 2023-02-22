@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smart_presence_app/list/list_info.dart';
+import 'package:smart_presence_app/model/list/list_info.dart';
 import 'package:smart_presence_app/widget/button.dart';
 import 'package:smart_presence_app/widget/dot_indicator.dart';
 import 'package:smart_presence_app/widget/onbord_content.dart';
