@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "647606820218",
+    "project_id": "smart-precrnsce",
+    "storage_bucket": "smart-precrnsce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647606820218:android:e6c6e0399a4345f0124ac3",
+        "android_client_info": {
+          "package_name": "com.example.smart_presence_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "647606820218-smuv6eijp1flp773g8iha5ldmqp8o7pc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.smart_presence_app",
+            "certificate_hash": "4b0d33dd5d9cb1a425b72a437b2d7da0ae86653f"
+          }
+        },
+        {
+          "client_id": "647606820218-858qq3i1bqs1vs5qeolt2nc32v6io0hs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBphDAXPNNx-i7MUkoUjbjDwZ7d8x4F9Xk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "647606820218-858qq3i1bqs1vs5qeolt2nc32v6io0hs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
