@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smart_presence_app/controller/control.dart';
-import 'package:smart_presence_app/view/screen/user/login_user.dart';
 import 'local/local.dart';
 import 'view/screen/splash.dart';
 
@@ -22,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     localcontroller controllerlang = Get.put(localcontroller());
     return GetMaterialApp(
-      home: const LoginUser(),
+      home: const SplashPage(),
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
