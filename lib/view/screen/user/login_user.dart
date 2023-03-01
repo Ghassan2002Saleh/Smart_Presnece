@@ -14,12 +14,19 @@ class LoginUser extends StatefulWidget {
 }
 
 class _LoginUserState extends State<LoginUser> {
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-
-    TextEditingController emailController = TextEditingController();
-    TextEditingController passwordController = TextEditingController();
     bool passwordobscure = true;
 
     login() async {
@@ -56,8 +63,8 @@ class _LoginUserState extends State<LoginUser> {
 
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
-      body: SafeArea(
-        child: ListView(
+      body: SingleChildScrollView(
+        child: Column(
           children: [
             const Spacer(),
             Stack(
