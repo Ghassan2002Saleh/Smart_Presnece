@@ -1,35 +1,33 @@
 import 'package:flutter/material.dart';
 
-class CustomTextFormField extends StatefulWidget {
-  final String text;
-  final Icon icon;
-  final Widget suffixIcon;
-  final String? Function(String?)? functionvalidator;
-  final void Function(String?)? functionsave;
-  final TextInputType textInputType;
-  final bool obscureText;
+class CustomTextField extends StatefulWidget {
+  String text;
+  Icon icon;
+  Widget suffixIcon;
+  TextInputType textInputType;
+  bool obscureText;
+  TextEditingController controller;
 
-  const CustomTextFormField({
+  CustomTextField({
     super.key,
     required this.text,
     required this.icon,
-    required this.functionsave,
-    required this.functionvalidator,
     required this.textInputType,
     this.obscureText = false,
     this.suffixIcon = const SizedBox(
       width: 1,
     ),
+    required this.controller,
   });
 
   // ghsansalh47@gmail.com
   // gh20191647
 
   @override
-  State<CustomTextFormField> createState() => _CustomTextFormFieldState();
+  State<CustomTextField> createState() => _CustomTextFieldState();
 }
 
-class _CustomTextFormFieldState extends State<CustomTextFormField> {
+class _CustomTextFieldState extends State<CustomTextField> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -42,11 +40,10 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
         const SizedBox(
           height: 8,
         ),
-        TextFormField(
+        TextField(
+          controller: widget.controller,
           keyboardType: widget.textInputType,
           obscureText: widget.obscureText,
-          validator: widget.functionvalidator,
-          onSaved: widget.functionsave,
           cursorColor: Theme.of(context).primaryColor,
           decoration: InputDecoration(
               filled: true,

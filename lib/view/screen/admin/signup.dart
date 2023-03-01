@@ -63,33 +63,29 @@ class _SignUpPageState extends State<SignUpPage> {
                 ),
                 Column(
                   children: [
-                    CustomTextFormField(
-                      textInputType: TextInputType.name,
-                      text: "الاسم",
-                      icon: const Icon(Icons.person_outline_sharp),
-                      functionsave: (val) {},
-                      functionvalidator: (val) {},
-                    ),
+                    // CustomTextField(
+                    //   textInputType: TextInputType.name,
+                    //   text: "الاسم",
+                    //   icon: const Icon(Icons.person_outline_sharp),
+
+                    // ),
                     const SizedBox(
                       height: 20,
                     ),
-                    CustomTextFormField(
-                      textInputType: TextInputType.emailAddress,
-                      text: "عنوان البريد الالكتروني",
-                      icon: const Icon(Icons.email_outlined),
-                      functionsave: (val) {},
-                      functionvalidator: (val) {},
-                    ),
+                    // CustomTextField(
+                    //   textInputType: TextInputType.emailAddress,
+                    //   text: "عنوان البريد الالكتروني",
+                    //   icon: const Icon(Icons.email_outlined),
+
+                    // ),
                     const SizedBox(
                       height: 20,
                     ),
-                    CustomTextFormField(
-                      textInputType: TextInputType.visiblePassword,
-                      text: "كلمة السر",
-                      icon: const Icon(Icons.lock_open),
-                      functionsave: (val) {},
-                      functionvalidator: (val) {},
-                    ),
+                    // CustomTextField(
+                    //   textInputType: TextInputType.visiblePassword,
+                    //   text: "كلمة السر",
+                    //   icon: const Icon(Icons.lock_open),
+                    // ),
                   ],
                 )
               ],
